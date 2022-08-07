@@ -1,5 +1,9 @@
 import { useState } from 'react';
 
+import { userLogin } from '../../services/UserService';
+
+import { Link } from 'react-router-dom';
+
 import * as S from '../../styles/registation.styled';
 
 function LoginPage() {
@@ -8,7 +12,7 @@ function LoginPage() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(email, password);
+    userLogin(email, password);
   };
 
   return (
@@ -20,17 +24,21 @@ function LoginPage() {
           <div>
             <label>Email:</label>
             <S.Input
+              type="email"
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Informe seu email"
             />
             <label>Senha:</label>
             <S.Input
+              type="password"
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Informe sua senha"
             />
           </div>
           <div className="buttons">
-            <S.Button className="register">Cadastrar</S.Button>
+            <Link to="/register">
+              <S.Button className="register">Cadastrar</S.Button>
+            </Link>
             <S.Button>Entrar</S.Button>
           </div>
         </S.Form>

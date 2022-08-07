@@ -28,8 +28,8 @@ export const Form = styled.form`
   font-weight: bold;
   color: ${(props) => props.theme.colors.text_dark};
 
-  width: 90%;
-  height: 50%;
+  max-width: 372px;
+  max-height: 448px;
 
   border-radius: 10px;
 
@@ -73,7 +73,7 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  width: 70%;
+  width: 162px;
   height: 3rem;
 
   font-size: 1rem;
