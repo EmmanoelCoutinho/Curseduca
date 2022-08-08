@@ -39,7 +39,7 @@ export const Form = styled.form`
 
   padding: 2rem;
 
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.text_light};
 
   .buttons {
     display: flex;
@@ -52,7 +52,7 @@ export const Form = styled.form`
   .register {
     border: 1px solid ${(props) => props.theme.colors.secundary};
     color: ${(props) => props.theme.colors.secundary};
-    background-color: ${(props) => props.theme.colors.background};
+    background-color: inherit;
   }
 
   h3 {

@@ -48,8 +48,7 @@ function FeedPage() {
             </button>
           </S.FeedHeader>
           <S.PostForm onSubmit={handleSubmit}>
-            <input
-              type="textarea"
+            <textarea
               placeholder="Digite aqui o seu post!"
               onChange={(e) => {
                 setPostContent(e.target.value);

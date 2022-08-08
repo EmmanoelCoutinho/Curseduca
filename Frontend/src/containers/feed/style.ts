@@ -79,9 +79,11 @@ export const PostForm = styled.form`
 
   background-color: ${(props) => props.theme.colors.primary};
 
-  input {
+  textarea {
     width: 100%;
     padding: 1rem 0 120px 0.5rem;
+
+    resize: none;
 
     font-size: 1rem;
     color: ${(props) => props.theme.colors.text_dark};
