@@ -12,4 +12,11 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 14px;
     font-family: "Mukta", sans-serif;
   }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
 `;

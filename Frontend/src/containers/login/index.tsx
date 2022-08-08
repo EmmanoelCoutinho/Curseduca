@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { userLogin } from '../../services/UserService';
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import * as S from '../../styles/registation.styled';
 
@@ -10,9 +10,14 @@ function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const navigate = useNavigate();
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     userLogin(email, password);
+    if (localStorage.getItem('token')) {
+      navigate('/feed');
+    }
   };
 
   return (
@@ -36,10 +41,10 @@ function LoginPage() {
             />
           </div>
           <div className="buttons">
+            <S.Button>Entrar</S.Button>
             <Link to="/register">
               <S.Button className="register">Cadastrar</S.Button>
             </Link>
-            <S.Button>Entrar</S.Button>
           </div>
         </S.Form>
       </S.Container>

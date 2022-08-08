@@ -8,7 +8,6 @@ export const getCurrentUser = async () => {
   });
   console.log(user.data);
 };
-getCurrentUser();
 
 export const userRegister = async (
   name: string,

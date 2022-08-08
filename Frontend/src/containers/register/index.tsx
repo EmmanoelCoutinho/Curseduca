@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 import { userRegister } from '../../services/UserService';
 
+import { Link } from 'react-router-dom';
+
 import * as S from '../../styles/registation.styled';
 
 function RegisterPage() {
@@ -19,7 +21,7 @@ function RegisterPage() {
       <S.Container>
         <img src="./logo.png" alt="logo" />
         <S.Form onSubmit={handleSubmit}>
-          <h3>Faça Login.</h3>
+          <h3>Faça seu cadastro.</h3>
           <div>
             <label>Nome:</label>
             <S.Input
@@ -41,8 +43,10 @@ function RegisterPage() {
             />
           </div>
           <div className="buttons">
-            <S.Button className="register">Cadastrar</S.Button>
-            <S.Button>Entrar</S.Button>
+            <S.Button type="submit">Cadastre-se</S.Button>
+            <Link to="/">
+              <S.Button className="register">voltar</S.Button>
+            </Link>
           </div>
         </S.Form>
       </S.Container>

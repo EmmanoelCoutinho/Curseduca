@@ -13,7 +13,7 @@ export const Container = styled.div`
 
   img {
     position: absolute;
-    top: 5%;
+    top: 3%;
 
     width: 14rem;
   }
@@ -27,21 +27,26 @@ export const Form = styled.form`
 
   font-weight: bold;
   color: ${(props) => props.theme.colors.text_dark};
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
 
-  max-width: 372px;
+  width: 90%;
+  max-width: 600px;
+  height: fit-content;
   max-height: 448px;
 
   border-radius: 10px;
+  border: none;
 
-  padding: 2.5rem 1rem;
+  padding: 2rem;
 
   background-color: ${(props) => props.theme.colors.background};
 
   .buttons {
     display: flex;
-    gap: 1rem;
-    height: 90px;
-    // background-color: red;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
   }
 
   .register {
@@ -52,6 +57,7 @@ export const Form = styled.form`
 
   h3 {
     font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   label {
@@ -73,7 +79,8 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  width: 162px;
+  width: fit-content;
+  min-width: 100px;
   height: 3rem;
 
   font-size: 1rem;
@@ -82,6 +89,8 @@ export const Button = styled.button`
 
   border-radius: 10px;
   border: none;
+
+  padding: 0.8rem;
 
   background-color: ${(props) => props.theme.colors.secundary};
 `;
