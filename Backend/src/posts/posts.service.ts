@@ -18,15 +18,11 @@ export class PostsService {
     return this.prisma.post.findMany();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} post`;
-  }
-
   update(id: number, updatePostDto: UpdatePostDto) {
-    return `This action updates a #${id} post`;
+    return this.prisma.post.update({ where: { id }, data: updatePostDto });
   }
 
   remove(id: number) {
-    return `This action removes a #${id} post`;
+    return this.prisma.post.delete({ where: { id } });
   }
 }
