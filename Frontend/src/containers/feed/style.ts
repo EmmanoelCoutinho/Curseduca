@@ -90,7 +90,6 @@ export const PostForm = styled.form`
     border-bottom: 2px solid ${(props) => props.theme.colors.primary};
 
     background-color: ${(props) => props.theme.colors.background};
-    background-color: red;
     overflow-wrap: hidden;
 
     :focus {

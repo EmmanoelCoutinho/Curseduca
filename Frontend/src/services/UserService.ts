@@ -6,7 +6,8 @@ export const getCurrentUser = async () => {
   const user = await axios.get(`${url}/me`, {
     headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
   });
-  console.log(user.data);
+  const data = { ...user.data, email: null };
+  return data;
 };
 
 export const userRegister = async (

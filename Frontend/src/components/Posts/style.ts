@@ -7,6 +7,7 @@ export const PostsWrapper = styled.div`
   height: fit-content;
 
   border-bottom: 2px solid ${(props) => props.theme.colors.primary};
+  background-color: ${(props) => props.theme.colors.text_light};
 
   p {
     font-size: 1rem;
@@ -29,9 +30,7 @@ export const PostHeader = styled.div`
   font-weight: bold;
   color: ${(props) => props.theme.colors.secundary};
 
-  border-bottom: 2px solid ${(props) => props.theme.colors.primary};
-
-  background-color: inherit;
+  background-color: ${(props) => props.theme.colors.text_light};
 
   padding: 0 0.5rem;
 
