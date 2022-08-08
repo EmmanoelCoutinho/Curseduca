@@ -27,3 +27,21 @@ export const sendPost = async ({ title, content, authorId }: IPostProps) => {
     console.log(err);
   }
 };
+
+export const updatePost = async (id: number, content: string) => {
+  try {
+    const response = await axios.put(`${url}/update/${id}`, content, headers);
+    return response.data;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const deletePost = async (id: number) => {
+  try {
+    const response = await axios.delete(`${url}/delete/${id}`, headers);
+    return response.data;
+  } catch (err) {
+    console.log(err);
+  }
+};

@@ -60,6 +60,7 @@ function FeedPage() {
           {posts.map((post) => (
             <Posts
               key={post.id}
+              id={post.id}
               title={post.title}
               content={post.content}
               authorId={post.authorId}

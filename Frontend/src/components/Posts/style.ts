@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { PostForm } from '../../containers/feed/style';
+
 export const PostsWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -42,5 +44,22 @@ export const PostHeader = styled.div`
   button {
     border: none;
     background-color: inherit;
+  }
+`;
+
+export const EditForm = styled(PostForm)`
+  input {
+    background-color: ${(props) => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.text_dark};
+    border: none;
+  }
+
+  span {
+    position: absolute;
+    margin: 0 70% 1.5rem 0;
+
+    font-size: 1rem;
+    font-weight: bold;
+    color: ${(props) => props.theme.colors.secundary};
   }
 `;
