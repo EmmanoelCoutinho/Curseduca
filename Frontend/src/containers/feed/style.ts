@@ -55,7 +55,7 @@ export const FeedHeader = styled.div`
   span {
     font-size: 1rem;
     font-weight: bold;
-    color: ${(props) => props.theme.colors.text_light};
+    color: white;
   }
 
   button {

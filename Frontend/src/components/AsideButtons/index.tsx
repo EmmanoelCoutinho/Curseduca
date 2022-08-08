@@ -3,12 +3,13 @@ import { Button } from './style';
 interface Iprops {
   text: string;
   icon: any;
+  handleClick?: () => void;
 }
 
-function AsideButtons({ text, icon }: Iprops) {
+function AsideButtons({ text, icon, handleClick }: Iprops) {
   return (
     <div>
-      <Button>
+      <Button onClick={handleClick}>
         {icon}
         <span>{text}</span>
       </Button>

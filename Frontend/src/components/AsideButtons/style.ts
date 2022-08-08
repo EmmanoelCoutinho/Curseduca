@@ -21,7 +21,7 @@ export const Button = styled.button`
   background-color: inherit;
 
   :hover {
-    background-color: ${(props) => props.theme.colors.primary};
+    background-color: ${(props) => props.theme.colors.text_dark};
     color: ${(props) => props.theme.colors.text_light};
   }
 `;
